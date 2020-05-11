@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import "./styles.css";
+import "./styles.scss";
 import Home from "./Home.js";
 import { ScalingSquaresSpinner } from "react-epic-spinners";
 
@@ -16,7 +16,7 @@ export default function App() {
   return (
     <div className="App">
       {isLoading ? (
-        <ScalingSquaresSpinner color="#000000" size="200" className="loader" />
+        <ScalingSquaresSpinner size="200" color="#357cb3" className="loader" />
       ) : (
         <Home />
       )}
