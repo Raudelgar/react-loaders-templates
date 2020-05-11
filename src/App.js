@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import "./styles.scss";
 import Home from "./Home.js";
-import { ScalingSquaresSpinner } from "react-epic-spinners";
+import SquareSpinner from "./SquareSpinner.js";
 
 export default function App() {
   const [isLoading, setLoading] = useState(true);
@@ -15,11 +15,7 @@ export default function App() {
 
   return (
     <div className="App">
-      {isLoading ? (
-        <ScalingSquaresSpinner size="200" color="#357cb3" className="loader" />
-      ) : (
-        <Home />
-      )}
+      {isLoading ? <SquareSpinner num={4} /> : <Home />}
     </div>
   );
 }
