@@ -2,7 +2,7 @@ import React from "react";
 
 import "./atom.scss";
 
-export default function AtomSpiinner() {
+export default function AtomSpinner() {
   return (
     <div className="bg-loader">
       <div className="atom-spinner loader">
