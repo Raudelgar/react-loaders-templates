@@ -13,15 +13,9 @@ export default function App() {
     }, 3000);
   }, [isLoading]);
 
-  const loadSquares = () => setLoading(true);
-
   return (
     <div className="App">
-      {isLoading ? (
-        <SquareSpinner num={4} />
-      ) : (
-        <Home loadSquares={loadSquares} />
-      )}
+      {isLoading ? <SquareSpinner num={4} /> : <Home />}
     </div>
   );
 }

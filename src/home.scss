@@ -1,5 +1,5 @@
 .main {
-  background-color: #252525;
+  background-color: #141414;
   color: #fff;
   min-height: 100vh;
   animation: show linear 0.5s;
@@ -20,6 +20,10 @@
       margin: 0 15px;
     }
   }
+}
+
+.non-click{
+  pointer-events: none;
 }
 
 @keyframes show {

@@ -6,7 +6,7 @@ import FlowerSpinner from "./FlowerSpinner.js";
 import AtomSpinner from "./AtomSpinner.js";
 import SquareSpinner from "./SquareSpinner.js";
 
-export default function Home({ loadSquares }) {
+export default function Home() {
   const [isLoading, setLoading] = useState(false);
   const loaderRef = useRef("");
 
@@ -37,12 +37,8 @@ export default function Home({ loadSquares }) {
     }
   };
 
-  if (isLoading) {
-    return loaderRef.current;
-  }
-
   return (
-    <div className="main">
+    <div className={`main ${isLoading ? "non-click" : ""}`}>
       <h1>Hello CodeSandbox</h1>
       <h2>Start editing to see some magic happen!</h2>
       <div className="btn-group">
@@ -56,6 +52,7 @@ export default function Home({ loadSquares }) {
           Flower
         </button>
       </div>
+      {isLoading && loaderRef.current}
     </div>
   );
 }
