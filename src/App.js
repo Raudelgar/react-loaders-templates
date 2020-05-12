@@ -11,11 +11,17 @@ export default function App() {
     setTimeout(() => {
       setLoading(false);
     }, 3000);
-  }, []);
+  }, [isLoading]);
+
+  const loadSquares = () => setLoading(true);
 
   return (
     <div className="App">
-      {isLoading ? <SquareSpinner num={4} /> : <Home />}
+      {isLoading ? (
+        <SquareSpinner num={4} />
+      ) : (
+        <Home loadSquares={loadSquares} />
+      )}
     </div>
   );
 }

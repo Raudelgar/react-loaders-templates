@@ -8,29 +8,22 @@
   font-family: sans-serif;
   text-align: center;
   min-height: 100vh;
-}
 
-.main {
-  background-color: #252525;
-  color: #fff;
-  min-height: 100vh;
-  animation: show linear 0.5s;
-}
-
-.loader {
-  margin: 0;
-  left: calc(50vw - 100px);
-  top: calc(50vh - 100px);
-}
-
-@keyframes show {
-  0% {
-    /* transition: opacity 1s ease; */
-    opacity: 0;
+  .loader {
+    position: absolute;
+    margin: 0;
+    left: calc(50vw - 100px);
+    top: calc(50vh - 100px);
   }
 
-  100% {
-    /* transition: opacity 1s ease; */
-    opacity: 1;
+  .bg-loader{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: #1a1919d7;
   }
 }
+
+

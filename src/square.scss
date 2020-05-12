@@ -6,8 +6,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  animation: scaling-squares-animation 1250ms;
-  animation-iteration-count: infinite;
+  animation: scaling-squares-animation infinite 1250ms;
   transform: rotate(0deg);
 
   .square {
@@ -19,7 +18,6 @@
     position: absolute;
     animation-duration: 1250ms;
     animation-iteration-count: infinite;
-    // animation-direction: alternate;
   }
 
   .square:nth-child(1) {
