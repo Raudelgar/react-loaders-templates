@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 
 import "./home.scss";
-// import { FlowerSpinner } from "react-epic-spinners";
+// import { SemipolarSpinner } from "react-epic-spinners";
 import FlowerSpinner from "./FlowerSpinner.js";
 import AtomSpinner from "./AtomSpinner.js";
 import SquareSpinner from "./SquareSpinner.js";
+import SemipolarSpinner from "./SemipolarSpinner.js";
 
 export default function Home() {
   const [isLoading, setLoading] = useState(false);
@@ -32,6 +33,9 @@ export default function Home() {
       case "flower":
         loaderRef.current = <FlowerSpinner />;
         break;
+      case "polar":
+        loaderRef.current = <SemipolarSpinner />;
+        break;
       default:
         break;
     }
@@ -50,6 +54,9 @@ export default function Home() {
         </button>
         <button className="btn" onClick={() => fireLoaders("flower")}>
           Flower
+        </button>
+        <button className="btn" onClick={() => fireLoaders("polar")}>
+          Semi-Polar
         </button>
       </div>
       {isLoading && loaderRef.current}
